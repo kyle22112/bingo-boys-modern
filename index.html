@@ -19,12 +19,19 @@
       @keyframes cool-text-effect {
         from {color: black;}
         to {color: red;}
+      }
+      @keyframes cool-text-effect2 {
         from {color: red;}
         to {color: black;}
       }
       .cool-text {
         animation-name: cool-text-effect;
-        animation-duration: 4s;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      }
+      .cool-text2 {
+        animation-name: cool-text-effect2;
+        animation-duration: 2s;
         animation-iteration-count: infinite;
       }
       nav {
@@ -92,7 +99,7 @@
     <h1>Bingo Boys</h1>
     <img src="bingo.PNG" width="238" height="155" alt="logo">
     <footer>
-      <h3 class='cool-text'>Website by Ferret Man</h3>
+      <h3 class='cool-text' class='cool-text-effect2'>Website by Ferret Man</h3>
     </footer>
   </body>
 </html>
