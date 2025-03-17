@@ -16,6 +16,15 @@
         flex-direction: column;
         min-height: 100vh;
       }
+      @keyframes cool-text-effect {
+        from {color: black;}
+        to {color: blue;}
+      }
+      .cool-text {
+        animation-name: cool-text-effect;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      }
       nav {
         background-color: #333;
         padding: 1em;
@@ -81,7 +90,7 @@
     <h1>Bingo Boys</h1>
     <img src="bingo.PNG" width="238" height="155" alt="logo">
     <footer>
-      Website by Ferret Man
+      <h3 class='cool-text'>Website by Ferret Man</h3>
     </footer>
   </body>
 </html>
