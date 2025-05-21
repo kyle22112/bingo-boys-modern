@@ -1,173 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bingo Boys Gallery</title>
-    <style>
-      body {
-        margin: 0;
-        font-family: "Bubblegum Sans", sans-serif;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-      }
-      .center {
-        text-align: center;
-      }
-      nav {
-        background-color: #333;
-        padding: 1em;
-      }
-      nav ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: flex-end;
-      }
-      nav ul li {
-        margin-left: 2em;
-      }
-      nav ul li a {
-        color: white;
-        text-decoration: none;
-        font-size: 1.2em;
-      }
-      nav ul li a:hover {
-        text-decoration: underline;
-      }
-      h1 {
-        text-align: center;
-        margin-top: 2em;
-      }
-      footer {
-        background-color: #333;
-        color: white;
-        text-align: center;
-        padding: 1em 0;
-        margin-top: auto;
-      }
-      .gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        gap: 10px;
-        padding: 1em;
-      }
-      .gallery img {
-        width: 100%;
-        height: auto;
-        border-radius: 6px;
-        cursor: pointer;
-        object-fit: cover;
-      }
-    </style>
-  </head>
-  <body>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="news.html">Bingo News</a></li>
-        <li><a href="music.html">Music</a></li>
-        <li><a href="members.html">Members</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-      </ul>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bingo Gallery</title>
 
-    <h1 class="center">Gallery</h1>
-    <p class="center">Photos and images of or related to the Bingo Boys.</p>
+  <!-- Glightbox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 
-    <div class="gallery">
-      <a href="https://i.postimg.cc/Y042Smd3/1.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/Y042Smd3/1.jpg" alt="Image 1"></a>
-      <a href="https://i.postimg.cc/XY6NVqdf/2.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/XY6NVqdf/2.jpg" alt="Image 2"></a>
-      <a href="https://i.postimg.cc/gc5kTN0B/3.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/gc5kTN0B/3.jpg" alt="Image 3"></a>
-      <a href="https://i.postimg.cc/QxTxG19N/4.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/QxTxG19N/4.jpg" alt="Image 4"></a>
-      <a href="https://i.postimg.cc/zGwz3NF9/5.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/zGwz3NF9/5.jpg" alt="Image 5"></a>
-      <a href="https://i.postimg.cc/pd22FS0y/6.png" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/pd22FS0y/6.png" alt="Image 6"></a>
-      <a href="https://i.postimg.cc/hjvcCdRB/7.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/hjvcCdRB/7.jpg" alt="Image 7"></a>
-      <a href="https://i.postimg.cc/N0pQ7xVD/8.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/N0pQ7xVD/8.jpg" alt="Image 8"></a>
-      <a href="https://i.postimg.cc/gJ7d12G6/9.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/gJ7d12G6/9.jpg" alt="Image 9"></a>
-      <a href="https://i.postimg.cc/Y0mk7BSD/10.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/Y0mk7BSD/10.jpg" alt="Image 10"></a>
-      <a href="https://i.postimg.cc/T3xytC7v/11.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/T3xytC7v/11.jpg" alt="Image 11"></a>
-      <a href="https://i.postimg.cc/WpDJzDFC/12.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/WpDJzDFC/12.jpg" alt="Image 12"></a>
-      <a href="https://i.postimg.cc/ThMxYNLd/13.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/ThMxYNLd/13.jpg" alt="Image 13"></a>
-      <a href="https://i.postimg.cc/PfBvwt1x/14.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/PfBvwt1x/14.jpg" alt="Image 14"></a>
-      <a href="https://i.postimg.cc/P5MC9Y9p/15.png" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/P5MC9Y9p/15.png" alt="Image 15"></a>
-      <a href="https://i.postimg.cc/d1g3rBkX/16.png" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/d1g3rBkX/16.png" alt="Image 16"></a>
-      <a href="https://i.postimg.cc/sD7QPtJJ/17.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/sD7QPtJJ/17.jpg" alt="Image 17"></a>
-      <a href="https://i.postimg.cc/1z58Q41W/18.png" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/1z58Q41W/18.png" alt="Image 18"></a>
-      <a href="https://i.postimg.cc/wBf7TH69/19.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/wBf7TH69/19.jpg" alt="Image 19"></a>
-      <a href="https://i.postimg.cc/BZ1XsdRG/20.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/BZ1XsdRG/20.jpg" alt="Image 20"></a>
-      <a href="https://i.postimg.cc/KvS4Y0y3/21.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/KvS4Y0y3/21.jpg" alt="Image 21"></a>
-      <a href="https://i.postimg.cc/kM8XLWtJ/22.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/kM8XLWtJ/22.jpg" alt="Image 22"></a>
-      <a href="https://i.postimg.cc/hPLvQVSy/23.png" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/hPLvQVSy/23.png" alt="Image 23"></a>
-      <a href="https://i.postimg.cc/WzRph1xc/24.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/WzRph1xc/24.jpg" alt="Image 24"></a>
-      <a href="https://i.postimg.cc/Hk3LBH8b/25.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/Hk3LBH8b/25.jpg" alt="Image 25"></a>
-      <a href="https://i.postimg.cc/vZGBrDTQ/26.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/vZGBrDTQ/26.jpg" alt="Image 26"></a>
-      <a href="https://i.postimg.cc/X7b7WXww/27.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/X7b7WXww/27.jpg" alt="Image 27"></a>
-      <a href="https://i.postimg.cc/sD4fgycb/28.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/sD4fgycb/28.jpg" alt="Image 28"></a>
-      <a href="https://i.postimg.cc/P5qHfDN8/29.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/P5qHfDN8/29.jpg" alt="Image 29"></a>
-      <a href="https://i.postimg.cc/NjNgR4Z4/30.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/NjNgR4Z4/30.jpg" alt="Image 30"></a>
-      <a href="https://i.postimg.cc/yNk7jRHz/31.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/yNk7jRHz/31.jpg" alt="Image 31"></a>
-      <a href="https://i.postimg.cc/65WJzZr1/32.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/65WJzZr1/32.jpg" alt="Image 32"></a>
-      <a href="https://i.postimg.cc/d3JXHMyT/33.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/d3JXHMyT/33.jpg" alt="Image 33"></a>
-      <a href="https://i.postimg.cc/dtwvXpY6/34.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/dtwvXpY6/34.jpg" alt="Image 34"></a>
-      <a href="https://i.postimg.cc/yNgzczm1/35.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/yNgzczm1/35.jpg" alt="Image 35"></a>
-      <a href="https://i.postimg.cc/vB5F2L2C/36.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/vB5F2L2C/36.jpg" alt="Image 36"></a>
-      <a href="https://i.postimg.cc/T3h8vXHV/37.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/T3h8vXHV/37.jpg" alt="Image 37"></a>
-      <a href="https://i.postimg.cc/DwN92Ytt/38.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/DwN92Ytt/38.jpg" alt="Image 38"></a>
-      <a href="https://i.postimg.cc/QtQwJNH3/39.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/QtQwJNH3/39.jpg" alt="Image 39"></a>
-      <a href="https://i.postimg.cc/fLNgy45g/40.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/fLNgy45g/40.jpg" alt="Image 40"></a>
-      <a href="https://i.postimg.cc/hvhqY7NT/41.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/hvhqY7NT/41.jpg" alt="Image 41"></a>
-      <a href="https://i.postimg.cc/W1R66QwC/42.png" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/W1R66QwC/42.png" alt="Image 42"></a>
-      <a href="https://i.postimg.cc/Vv5tW9JX/43.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/Vv5tW9JX/43.jpg" alt="Image 43"></a>
-      <a href="https://i.postimg.cc/x16jmm0L/44.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/x16jmm0L/44.jpg" alt="Image 44"></a>
-      <a href="https://i.postimg.cc/xTdRpnH3/45.png" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/xTdRpnH3/45.jpg" alt="Image 45"></a>
-      <a href="https://i.postimg.cc/ZqT9P5Zj/46.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/ZqT9P5Zj/46.jpg" alt="Image 46"></a>
-      <a href="https://i.postimg.cc/FHKMjT3d/47.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/FHKMjT3d/47.jpg" alt="Image 47"></a>
-      <a href="https://i.postimg.cc/xdtxTkXx/48.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/xdtxTkXx/48.jpg" alt="Image 48"></a>
-      <a href="https://i.postimg.cc/7Y7QzLRk/49.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/7Y7QzLRk/49.jpg" alt="Image 49"></a>
-      <a href="https://i.postimg.cc/4N7MxHN9/50.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/4N7MxHN9/50.jpg" alt="Image 50"></a>
-      <a href="https://i.postimg.cc/JnYjDvCk/51.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/JnYjDvCk/51.jpg" alt="Image 51"></a>
-      <a href="https://i.postimg.cc/MGyJgbD0/52.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/MGyJgbD0/52.jpg" alt="Image 52"></a>
-      <a href="https://i.postimg.cc/0NYPqT8M/53.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/0NYPqT8M/53.jpg" alt="Image 53"></a>
-      <a href="https://i.postimg.cc/CLTnFY42/54.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/CLTnFY42/54.jpg" alt="Image 54"></a>
-      <a href="https://i.postimg.cc/kXHj6QzZ/55.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/kXHj6QzZ/55.jpg" alt="Image 55"></a>
-      <a href="https://i.postimg.cc/kX5ckNyN/56.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/kX5ckNyN/56.jpg" alt="Image 56"></a>
-      <a href="https://i.postimg.cc/0Qk0Yk03/57.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/0Qk0Yk03/57.jpg" alt="Image 57"></a>
-      <a href="https://i.postimg.cc/Dw7tCF5b/58.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/Dw7tCF5b/58.jpg" alt="Image 58"></a>
-      <a href="https://i.postimg.cc/4yx3Zn6Z/59.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/4yx3Zn6Z/59.jpg" alt="Image 59"></a>
-      <a href="https://i.postimg.cc/6q0Gj7m6/60.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/6q0Gj7m6/60.jpg" alt="Image 60"></a>
-      <a href="https://i.postimg.cc/4xYtPhD4/61.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/4xYtPhD4/61.jpg" alt="Image 61"></a>
-      <a href="https://i.postimg.cc/tgW2cBD9/62.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/tgW2cBD9/62.jpg" alt="Image 62"></a>
-      <a href="https://i.postimg.cc/hv4WvR5N/63.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/hv4WvR5N/63.jpg" alt="Image 63"></a>
-      <a href="https://i.postimg.cc/NjvXk7mK/64.png" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/NjvXk7mK/64.png" alt="Image 64"></a>
-      <a href="https://i.postimg.cc/1XJdL7BQ/65.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/1XJdL7BQ/65.jpg" alt="Image 65"></a>
-      <a href="https://i.postimg.cc/1z7hY76k/66.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/1z7hY76k/66.jpg" alt="Image 66"></a>
-      <a href="https://i.postimg.cc/fRLvckvF/67.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/fRLvckvF/67.jpg" alt="Image 67"></a>
-      <a href="https://i.postimg.cc/tCYJrvX1/68.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/tCYJrvX1/68.jpg" alt="Image 68"></a>
-      <a href="https://i.postimg.cc/W1mnvCMF/69.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/W1mnvCMF/69.jpg" alt="Image 69"></a>
-      <a href="https://i.postimg.cc/x8F9HyL1/70.png" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/x8F9HyL1/70.png" alt="Image 70"></a>
-      <a href="https://i.postimg.cc/MHG15PgW/71.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/MHG15PgW/71.jpg" alt="Image 71"></a>
-      <a href="https://i.postimg.cc/nLcDLWvd/72.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/nLcDLWvd/72.jpg" alt="Image 72"></a>
-      <a href="https://i.postimg.cc/yxT8QkHQ/73.png" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/yxT8QkHQ/73.png" alt="Image 73"></a>
-      <a href="https://i.postimg.cc/vTCJTCnB/74.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/vTCJTCnB/74.jpg" alt="Image 74"></a>
-      <a href="https://i.postimg.cc/MGmjnk1P/75.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/MGmjnk1P/75.jpg" alt="Image 75"></a>
-      <a href="https://i.postimg.cc/B6D3QTrf/76.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/B6D3QTrf/76.jpg" alt="Image 76"></a>
-      <a href="https://i.postimg.cc/1zyBpy9z/77.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/1zyBpy9z/77.jpg" alt="Image 77"></a>
-      <a href="https://i.postimg.cc/SRvKK6Tm/78.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/SRvKK6Tm/78.jpg" alt="Image 78"></a>
-      <a href="https://i.postimg.cc/ZR2gM2jC/79.jpg" class="glightbox" data-gallery="bingo"><img src="https://i.postimg.cc/ZR2gM2jC/79.jpg" alt="Image 79"></a>
-    </div>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
 
-    <footer>
-      &copy; 2025 Bingo Boys
-    </footer>
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
 
-    <script>
-      const lightbox = GLightbox({ selector: '.glightbox' });
-    </script>
-  </body>
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery a:hover img {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <h1 style="text-align:center; padding: 20px;">Bingo Lightbox Gallery</h1>
+  <div class="gallery">
+    <!-- BEGIN IMGBB IMAGE LINKS -->
+    <a href="https://ibb.co/3pSg1XK" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/3pSg1XK/1.jpg" alt="Image 1"></a>
+    <a href="https://ibb.co/wrF0Zm5" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/wrF0Zm5/2.jpg" alt="Image 2"></a>
+    <a href="https://ibb.co/G5G3XtD" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/G5G3XtD/3.jpg" alt="Image 3"></a>
+    <a href="https://ibb.co/2SFzJzB" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/2SFzJzB/4.jpg" alt="Image 4"></a>
+    <a href="https://ibb.co/hD7zZn5" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/hD7zZn5/5.jpg" alt="Image 5"></a>
+    <a href="https://ibb.co/hdBkqHp" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/hdBkqHp/6.png" alt="Image 6"></a>
+    <a href="https://ibb.co/HngMQVg" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/HngMQVg/7.jpg" alt="Image 7"></a>
+    <a href="https://ibb.co/3R2T8DT" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/3R2T8DT/8.jpg" alt="Image 8"></a>
+    <a href="https://ibb.co/RTJkzZs" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/RTJkzZs/9.jpg" alt="Image 9"></a>
+    <a href="https://ibb.co/GR6xWLm" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/GR6xWLm/10.jpg" alt="Image 10"></a>
+    <a href="https://ibb.co/n3F4R2R" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/n3F4R2R/11.jpg" alt="Image 11"></a>
+    <a href="https://ibb.co/hZzZ2Hx" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/hZzZ2Hx/12.jpg" alt="Image 12"></a>
+    <a href="https://ibb.co/x8cbdP1" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/x8cbdP1/13.jpg" alt="Image 13"></a>
+    <a href="https://ibb.co/LzGSn1d" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/LzGSn1d/14.jpg" alt="Image 14"></a>
+    <a href="https://ibb.co/9pLh3c9" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/9pLh3c9/15.png" alt="Image 15"></a>
+    <a href="https://ibb.co/ZVMCQ5C" class="glightbox" data-gallery="bingo" data-title="Somer Himpson, by the one and only Evan">
+      <img src="https://i.ibb.co/ZVMCQ5C/16.png" alt="Image 16">
+    </a>
+    <a href="https://ibb.co/Tmbnq0C" class="glightbox" data-gallery="bingo" data-title="Halloween edition Bingo Boys pfp">
+      <img src="https://i.ibb.co/Tmbnq0C/17.jpg" alt="Image 17">
+    </a>
+    <a href="https://ibb.co/MZDMdDX" class="glightbox" data-gallery="bingo" data-title="Best thing to come out of Gartic Phone">
+      <img src="https://i.ibb.co/MZDMdDX/18.png" alt="Image 18">
+    </a>
+    <a href="https://ibb.co/qpnPttd" class="glightbox" data-gallery="bingo" data-title="Beautiful drawing by Owen">
+      <img src="https://i.ibb.co/qpnPttd/19.jpg" alt="Image 19">
+    </a>
+    <a href="https://ibb.co/pPWmFZP" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/pPWmFZP/20.jpg" alt="Image 20"></a>
+    <a href="https://ibb.co/pWkPJWf" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/pWkPJWf/21.jpg" alt="Image 21"></a>
+    <a href="https://ibb.co/GpyWtj2" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/GpyWtj2/22.jpg" alt="Image 22"></a>
+    <a href="https://ibb.co/ZLQgM1H" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/ZLQgM1H/23.jpg" alt="Image 23"></a>
+    <a href="https://ibb.co/2ZxkMxt" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/2ZxkMxt/24.jpg" alt="Image 24"></a>
+    <a href="https://ibb.co/MRP6N35" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/MRP6N35/25.jpg" alt="Image 25"></a>
+    <a href="https://ibb.co/4sGtLWT" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/4sGtLWT/26.jpg" alt="Image 26"></a>
+    <a href="https://ibb.co/3yf64LG" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/3yf64LG/27.jpg" alt="Image 27"></a>
+    <a href="https://ibb.co/vqTC55B" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/vqTC55B/28.jpg" alt="Image 28"></a>
+    <a href="https://ibb.co/5YRrNrG" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/5YRrNrG/29.jpg" alt="Image 29"></a>
+    <a href="https://ibb.co/Jp8zT8x" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/Jp8zT8x/30.jpg" alt="Image 30"></a>
+    <a href="https://ibb.co/MpqjTy2" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/MpqjTy2/31.jpg" alt="Image 31"></a>
+    <a href="https://ibb.co/QM0XrW2" class="glightbox" data-gallery="bingo" data-title="Moldy lemon that was hid in Evan's house">
+      <img src="https://i.ibb.co/QM0XrW2/32.jpg" alt="Image 32">
+    </a>
+    <a href="https://ibb.co/nb0pGt9" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/nb0pGt9/33.jpg" alt="Image 33"></a>
+    <a href="https://ibb.co/zPCvV6z" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/zPCvV6z/34.jpg" alt="Image 34"></a>
+    <a href="https://ibb.co/4RRLtD2" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/4RRLtD2/35.jpg" alt="Image 35"></a>
+    <a href="https://ibb.co/DwX4rwf" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/DwX4rwf/36.jpg" alt="Image 36"></a>
+    <a href="https://ibb.co/s1Lg3Gn" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/s1Lg3Gn/37.jpg" alt="Image 37"></a>
+    <a href="https://ibb.co/9tHzP8y" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/9tHzP8y/38.jpg" alt="Image 38"></a>
+    <a href="https://ibb.co/JkgHrrv" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/JkgHrrv/39.jpg" alt="Image 39"></a>
+    <a href="https://ibb.co/yhvf6ZB" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/yhvf6ZB/40.jpg" alt="Image 40"></a>
+    <a href="https://ibb.co/hV9kBSx" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/hV9kBSx/41.jpg" alt="Image 41"></a>
+    <a href="https://ibb.co/42kGDvp" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/42kGDvp/42.png" alt="Image 42"></a>
+    <a href="https://ibb.co/wMB5PY9" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/wMB5PY9/43.jpg" alt="Image 43"></a>
+    <a href="https://ibb.co/qgFWsNK" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/qgFWsNK/44.jpg" alt="Image 44"></a>
+    <a href="https://ibb.co/dGTv5LJ" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/dGTv5LJ/45.jpg" alt="Image 45"></a>
+    <a href="https://ibb.co/fNYh8PP" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/fNYh8PP/46.jpg" alt="Image 46"></a>
+    <a href="https://ibb.co/NxW7Kw5" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/NxW7Kw5/47.jpg" alt="Image 47"></a>
+    <a href="https://ibb.co/h2CZcLW" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/h2CZcLW/48.jpg" alt="Image 48"></a>
+    <a href="https://ibb.co/zfd0DCx" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/zfd0DCx/49.jpg" alt="Image 49"></a>
+    <a href="https://ibb.co/s2K8g1L" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/s2K8g1L/50.jpg" alt="Image 50"></a>
+    <a href="https://ibb.co/XkcHRdC" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/XkcHRdC/51.jpg" alt="Image 51"></a>
+    <a href="https://ibb.co/PM1MHmt" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/PM1MHmt/52.jpg" alt="Image 52"></a>
+    <a href="https://ibb.co/0DX7tsL" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/0DX7tsL/53.jpg" alt="Image 53"></a>
+    <a href="https://ibb.co/VjZ13P6" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/VjZ13P6/54.jpg" alt="Image 54"></a>
+    <a href="https://ibb.co/LxvKNnS" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/LxvKNnS/55.jpg" alt="Image 55"></a>
+    <a href="https://ibb.co/WVrSMvX" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/WVrSMvX/56.jpg" alt="Image 56"></a>
+    <a href="https://ibb.co/yRZ4nCL" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/yRZ4nCL/57.jpg" alt="Image 57"></a>
+    <a href="https://ibb.co/sgVtpyj" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/sgVtpyj/58.jpg" alt="Image 58"></a>
+    <a href="https://ibb.co/CMHTqYc" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/CMHTqYc/59.jpg" alt="Image 59"></a>
+    <a href="https://ibb.co/5TFyzgd" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/5TFyzgd/60.jpg" alt="Image 60"></a>
+    <a href="https://ibb.co/6YZ5Xdf" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/6YZ5Xdf/61.jpg" alt="Image 61"></a>
+    <a href="https://ibb.co/Dk8KDZD" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/Dk8KDZD/62.jpg" alt="Image 62"></a>
+    <a href="https://ibb.co/kc3ChPW" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/kc3ChPW/63.jpg" alt="Image 63"></a>
+    <a href="https://ibb.co/XZjV7FT" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/XZjV7FT/64.png" alt="Image 64"></a>
+    <a href="https://ibb.co/jzRcb8v" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/jzRcb8v/65.jpg" alt="Image 65"></a>
+    <a href="https://ibb.co/hKjt0cV" class="glightbox" data-gallery="bingo" data-title="Evan's dog, Kaia">
+      <img src="https://i.ibb.co/hKjt0cV/66.jpg" alt="Image 66">
+    </a>
+    <a href="https://ibb.co/gz9dfDw" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/gz9dfDw/67.jpg" alt="Image 67"></a>
+    <a href="https://ibb.co/NVFmqD2" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/NVFmqD2/68.jpg" alt="Image 68"></a>
+    <a href="https://ibb.co/b3ND2cd" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/b3ND2cd/69.jpg" alt="Image 69"></a>
+    <a href="https://ibb.co/hR9Ns8s" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/hR9Ns8s/70.png" alt="Image 70"></a>
+    <a href="https://ibb.co/3rqqsyf" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/3rqqsyf/71.jpg" alt="Image 71"></a>
+    <a href="https://ibb.co/svHkMkq" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/svHkMkq/72.jpg" alt="Image 72"></a>
+    <a href="https://ibb.co/sHpLk2q" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/sHpLk2q/73.png" alt="Image 73"></a>
+    <a href="https://ibb.co/JkBRm8F" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/JkBRm8F/74.jpg" alt="Image 74"></a>
+    <a href="https://ibb.co/mqPR5cv" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/mqPR5cv/75.jpg" alt="Image 75"></a>
+    <a href="https://ibb.co/gmd5TPv" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/gmd5TPv/76.jpg" alt="Image 76"></a>
+    <a href="https://ibb.co/z6qbNCL" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/z6qbNCL/77.jpg" alt="Image 77"></a>
+    <a href="https://ibb.co/9vWKP5K" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/9vWKP5K/78.jpg" alt="Image 78"></a>
+    <a href="https://ibb.co/qJkCrCd" class="glightbox" data-gallery="bingo"><img src="https://i.ibb.co/qJkCrCd/79.jpg" alt="Image 79"></a>
+  </div>
+
+  <!-- Glightbox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script>
+    const lightbox = GLightbox({
+      selector: '.glightbox'
+    });
+  </script>
+
+</body>
 </html>
