@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap"
+      rel="stylesheet"
+    />
     <title>Bingo Boys</title>
     <style>
       body {
@@ -16,47 +19,56 @@
         flex-direction: column;
         min-height: 100vh;
       }
-      .center {
-        text-align: center;
-      }
+
       nav {
         background-color: #333;
         padding: 1em;
       }
+
       nav ul {
-        list-style-type: none;
+        list-style: none;
         margin: 0;
         padding: 0;
         display: flex;
-        justify-content: flex-end;
+        flex-wrap: wrap;
+        justify-content: center;
       }
+
       nav ul li {
-        margin-left: 2em;
+        margin: 0.5em 1em;
       }
+
       nav ul li a {
         color: white;
         text-decoration: none;
         font-size: 1.2em;
       }
-      socials {
-        color: white;
-        text-decoration: none;
-        font-size: 1.2em;
-      }
-      socials:hover {
-        text-decoration: underline;
-      }
+
       nav ul li a:hover {
         text-decoration: underline;
       }
-      h1 {
+
+      h1, h2, h3 {
         text-align: center;
-        margin-top: 2em;
+        margin: 1em 0 0.3em;
       }
-      img {
-        display: block;
-        margin: 2em auto;
+
+      .album-covers {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1em;
+        padding: 1em;
       }
+
+      .album-covers img {
+        max-width: 125px;
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      }
+
       footer {
         background-color: #333;
         color: white;
@@ -69,37 +81,28 @@
   <body>
     <nav>
       <ul>
-        <li>
-          <a href="index.html">Home</a>
-        </li>
-        <li>
-          <a href="about.html">About Us</a>
-        </li>
-        <li>
-          <a href="news.html">Bingo News</a>
-        </li>
-        <li>
-          <a href="music.html">Music</a>
-        </li>
-        <li>
-          <a href="members.html">Members</a>
-        </li>
-        <li>
-          <a href="gallery.html">Gallery</a>
-        </li>
-        <li>
-          <a href="lore.html">Lore</a>
-        </li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="news.html">Bingo News</a></li>
+        <li><a href="music.html">Music</a></li>
+        <li><a href="members.html">Members</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="lore.html">Lore</a></li>
       </ul>
     </nav>
+
     <h1>Music</h1>
-    <div>
-      <img src="frontcover.png" width=125 height=125>
+
+    <div class="album-covers">
+      <img src="frontcover.png" alt="Front Cover" />
+      <img src="backcover.png" alt="Back Cover" />
     </div>
-    <div>
-      <img src="backcover.png" width=125 height=125>
-    </div>
-    <h2 class="center">Some Sunny Day</h2>
-    <h3 class="center">Coming Soon...</h3>
+
+    <h2>Some Sunny Day</h2>
+    <h3>Coming Soon...</h3>
+
+    <footer>
+      <p>&copy; 2025 Bingo Boys</p>
+    </footer>
   </body>
 </html>
