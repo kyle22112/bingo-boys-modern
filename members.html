@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap"
+      rel="stylesheet"
+    />
     <title>Bingo Boys</title>
     <style>
       body {
@@ -15,48 +18,53 @@
         display: flex;
         flex-direction: column;
         min-height: 100vh;
+        padding: 1em;
+        box-sizing: border-box;
       }
-      .center {
-        text-align: center;
-      }
+
       nav {
         background-color: #333;
         padding: 1em;
       }
+
       nav ul {
-        list-style-type: none;
+        list-style: none;
         margin: 0;
         padding: 0;
         display: flex;
-        justify-content: flex-end;
+        flex-wrap: wrap;
+        justify-content: center;
       }
+
       nav ul li {
-        margin-left: 2em;
+        margin: 0.5em 1em;
       }
+
       nav ul li a {
         color: white;
         text-decoration: none;
         font-size: 1.2em;
       }
-      socials {
-        color: white;
-        text-decoration: none;
-        font-size: 1.2em;
-      }
-      socials:hover {
-        text-decoration: underline;
-      }
+
       nav ul li a:hover {
         text-decoration: underline;
       }
+
       h1 {
         text-align: center;
-        margin-top: 2em;
+        margin: 1em 0 0.5em;
       }
-      img {
-        display: block;
-        margin: 2em auto;
+
+      .member-list {
+        text-align: center;
+        margin-top: 1em;
       }
+
+      .member-list h3 {
+        margin: 0.3em 0;
+        font-size: 1.4em;
+      }
+
       footer {
         background-color: #333;
         color: white;
@@ -69,40 +77,34 @@
   <body>
     <nav>
       <ul>
-        <li>
-          <a href="index.html">Home</a>
-        </li>
-        <li>
-          <a href="about.html">About Us</a>
-        </li>
-        <li>
-          <a href="news.html">Bingo News</a>
-        </li>
-        <li>
-          <a href="music.html">Music</a>
-        </li>
-        <li>
-          <a href="members.html">Members</a>
-        </li>
-        <li>
-          <a href="gallery.html">Gallery</a>
-        </li>
-        <li>
-          <a href="lore.html">Lore</a>
-        </li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="news.html">Bingo News</a></li>
+        <li><a href="music.html">Music</a></li>
+        <li><a href="members.html">Members</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="lore.html">Lore</a></li>
       </ul>
     </nav>
-    <h1 class="center">Members</h1>
-    <h3 class="center">Johnathan/Ferret Man/Lit Skittle</h3>
-    <h3 class="center">Owen/1984 Pepsi Can</h3>
-    <h3 class="center">Evan/Cupcake Man</h3>
-    <h3 class="center">Skyler</h3>
-    <h3 class="center">Ava/The Booty Slayer</h3>
-    <h3 class="center">River</h3>
-    <h3 class="center">Aiden</h3>
-    <h3 class="center">Ryder</h3>
-    <h3 class="center">Rangsey</h3>
-    <h3 class="center">Daymond</h3>
-    <h3 class="center">Curtis</h3>
+
+    <h1>Members</h1>
+    <div class="member-list">
+      <h3>Johnathan / Ferret Man / Lit Skittle</h3>
+      <h3>Owen / 1984 Pepsi Can</h3>
+      <h3>Evan / Cupcake Man</h3>
+      <h3>Skyler</h3>
+      <h3>Ava / The Booty Slayer</h3>
+      <h3>River</h3>
+      <h3>Aiden</h3>
+      <h3>Ryder</h3>
+      <h3>Rangsey</h3>
+      <h3>Daymond</h3>
+      <h3>Curtis</h3>
+      <h3>Chase</h3>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Bingo Boys</p>
+    </footer>
   </body>
 </html>
