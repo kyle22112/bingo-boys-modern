@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/8a307c401d.js" crossorigin="anonymous"></script>
     <title>Bingo Boys</title>
     <style>
       body {
@@ -15,9 +16,8 @@
         display: flex;
         flex-direction: column;
         min-height: 100vh;
-      }
-      .center {
-        text-align: center;
+        padding: 1em;
+        box-sizing: border-box;
       }
       nav {
         background-color: #333;
@@ -28,34 +28,44 @@
         margin: 0;
         padding: 0;
         display: flex;
-        justify-content: flex-end;
+        flex-wrap: wrap;
+        justify-content: center;
       }
       nav ul li {
-        margin-left: 2em;
+        margin: 0.5em 1em;
       }
       nav ul li a {
         color: white;
         text-decoration: none;
         font-size: 1.2em;
       }
-      socials {
-        color: white;
-        text-decoration: none;
-        font-size: 1.2em;
-      }
-      socials:hover {
-        text-decoration: underline;
-      }
       nav ul li a:hover {
         text-decoration: underline;
       }
       h1 {
         text-align: center;
+        margin-top: 1.5em;
+      }
+      p.center {
+        text-align: center;
+        max-width: 600px;
+        margin: 1em auto;
+        font-size: 1.2em;
+      }
+      .socials {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
         margin-top: 2em;
       }
-      img {
-        display: block;
-        margin: 2em auto;
+      .socials a {
+        color: #333;
+        font-size: 1.3em;
+        text-decoration: none;
+      }
+      .socials a:hover {
+        text-decoration: underline;
       }
       footer {
         background-color: #333;
@@ -69,36 +79,35 @@
   <body>
     <nav>
       <ul>
-        <li>
-          <a href="index.html">Home</a>
-        </li>
-        <li>
-          <a href="about.html">About Us</a>
-        </li>
-        <li>
-          <a href="news.html">Bingo News</a>
-        </li>
-        <li>
-          <a href="music.html">Music</a>
-        </li>
-        <li>
-          <a href="members.html">Members</a>
-        </li>
-        <li>
-          <a href="gallery.html">Gallery</a>
-        </li>
-        <li>
-          <a href="lore.html">Lore</a>
-        </li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="news.html">Bingo News</a></li>
+        <li><a href="music.html">Music</a></li>
+        <li><a href="members.html">Members</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="lore.html">Lore</a></li>
       </ul>
     </nav>
-    <h1 class="center">About Us</h1>
-    <p class="center">The Bingo Boys are a group that partakes in mamy different activities. Despite the name, playing bingo is not one of them. We make music, post videos, and have fun.</p>
-    <div class="center" class="socials">
-      <a href="https://www.youtube.com/@Bingo-Boys"><i class="fa-brands fa-square-youtube"></i> Youtube Channel</a>
-      <a href="https://www.tiktok.com/@bingo.boys.official"><i class="fa-brands fa-tiktok"></i> Tiktok Account</a>
-      <a href="https://www.instagram.com/boysbingoo"><i class="fa-brands fa-instagram"></i> Instagram Account</a>
+
+    <h1>About Us</h1>
+    <p class="center">
+      The Bingo Boys are a group that partakes in many different activities. Despite the name, playing bingo is not one of them. We make music, post videos, and have fun.
+    </p>
+
+    <div class="socials">
+      <a href="https://www.youtube.com/@Bingo-Boys" target="_blank">
+        <i class="fa-brands fa-square-youtube"></i> YouTube Channel
+      </a>
+      <a href="https://www.tiktok.com/@bingo.boys.official" target="_blank">
+        <i class="fa-brands fa-tiktok"></i> TikTok Account
+      </a>
+      <a href="https://www.instagram.com/boysbingoo" target="_blank">
+        <i class="fa-brands fa-instagram"></i> Instagram Account
+      </a>
     </div>
+
+    <footer>
+      <p>&copy; 2025 Bingo Boys</p>
+    </footer>
   </body>
-  <script src="https://kit.fontawesome.com/8a307c401d.js" crossorigin="anonymous"></script>
 </html>
