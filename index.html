@@ -2,42 +2,52 @@
 <html lang="en">
   <head>
     <meta property="og:title" content="Bingo Boys">
-    <meta property="og:description" content="Welcome to the official site of the Bingo Boys. Explore our music, news, gallery, members, and more.">
+    <meta property="og:description" content="Welcome to the official site of the Bingo Boys. Explore our music, news, gallery, members, and more">
     <meta property="og:image" content="https://bingo-boys.org/logocover.png">
     <meta property="og:url" content="https://bingo-boys.org/index.html">
     <meta property="og:type" content="website">
     <meta name="description" content="Welcome to the official site of the Bingo Boys. Explore our music, news, gallery, members, and more.">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8994374215719373" crossorigin="anonymous"></script>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet"/>
     <title>Bingo Boys</title>
     <style>
+      :root { --nav-h: 64px; --page-pad: 1em; }
+
+      /* Keep your padding for the page */
       body {
         margin: 0;
         font-family: "Bubblegum Sans", sans-serif;
         display: flex;
         flex-direction: column;
         min-height: 100vh;
+        padding: var(--page-pad);
         box-sizing: border-box;
+        background: #fff;
       }
 
+      /* Full-width sticky header while preserving body padding:
+         negate body padding with negative margins */
       nav {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
         background-color: #333;
-        padding: 0 1em;
-        position: relative;
+        margin: calc(-1 * var(--page-pad)) calc(-1 * var(--page-pad)) 0;
+        padding: 0 var(--page-pad);
+        min-height: var(--nav-h);
         display: flex;
-        align-items: center;   /* vertically center content */
-        justify-content: center; /* center links on desktop */
-        min-height: 60px;      /* ensures enough height for hamburger */
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 6px rgba(0,0,0,.2);
       }
 
+      /* Desktop nav list */
       nav ul {
         list-style: none;
         margin: 0;
@@ -45,125 +55,123 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        align-items: center;
+        gap: .5em 1.25em;
       }
 
-      nav ul li {
-        margin: 0.5em 1em;
-      }
-
-      nav ul li a {
-        color: white;
+      nav li a {
+        color: #fff;
         text-decoration: none;
         font-size: 1.2em;
       }
+      nav li a:hover { text-decoration: underline; }
 
-      nav ul li a:hover {
-        text-decoration: underline;
-      }
-
-      /* Hamburger icon */
+      /* Hamburger button (accessible) */
       .menu-toggle {
-        display: none;
-        flex-direction: column;
-        cursor: pointer;
+        display: none;            /* shown on mobile */
         position: absolute;
-        right: 1em;
+        right: var(--page-pad);
         top: 50%;
         transform: translateY(-50%);
+        width: 32px;
+        height: 24px;
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+        padding: 0;
         z-index: 1001;
       }
+      .menu-toggle:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
 
-      .menu-toggle div {
-        width: 25px;
+      /* Three bars perfectly aligned */
+      .menu-toggle .bar {
+        position: absolute;
+        left: 0; right: 0;
         height: 3px;
-        background: white;
-        margin: 5px 0;
-        transition: 0.4s;
+        background: #fff;
+        border-radius: 2px;
+        transition: transform .35s ease, opacity .25s ease, top .35s ease;
       }
+      .menu-toggle .bar:nth-child(1) { top: 0; }
+      .menu-toggle .bar:nth-child(2) { top: 10px; }
+      .menu-toggle .bar:nth-child(3) { top: 20px; }
 
-      /* Animate hamburger to X */
-      .menu-toggle.open div:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-      }
-      .menu-toggle.open div:nth-child(2) {
-        opacity: 0;
-      }
-      .menu-toggle.open div:nth-child(3) {
-        transform: rotate(-45deg) translate(6px, -6px);
-      }
+      /* Turn into a perfectly centered X */
+      .menu-toggle.open .bar:nth-child(1) { top: 10px; transform: rotate(45deg); }
+      .menu-toggle.open .bar:nth-child(2) { opacity: 0; }
+      .menu-toggle.open .bar:nth-child(3) { top: 10px; transform: rotate(-45deg); }
 
-      /* Mobile styles */
+      /* Mobile menu (hidden by default) */
       @media (max-width: 768px) {
-        nav {
-          justify-content: flex-start;
-        }
+        nav { justify-content: center; }
+        .menu-toggle { display: block; }
 
+        /* Start hidden and slide/fade in */
         nav ul {
-          flex-direction: column;
-          background: #333;
           position: absolute;
-          top: 60px;
+          top: var(--nav-h);
           right: 0;
-          width: 200px;
-          text-align: right;
-          padding: 1em;
+          width: min(280px, 85vw);
+          flex-direction: column;
+          align-items: flex-end;
+          background: #333;
+          padding: 0.75em var(--page-pad);
+          border-bottom-left-radius: 8px;
+          box-shadow: 0 8px 16px rgba(0,0,0,.25);
           max-height: 0;
           overflow: hidden;
-          transition: max-height 0.4s ease, opacity 0.4s ease;
           opacity: 0;
+          transform: translateY(-8px);
+          transition: max-height .35s ease, opacity .35s ease, transform .35s ease;
         }
-
         nav ul.show {
-          max-height: 500px; /* enough for all links */
+          max-height: 80vh;
           opacity: 1;
+          transform: translateY(0);
         }
 
-        .menu-toggle {
-          display: flex;
-        }
+        /* Space between vertical links */
+        nav ul li { margin: .35em 0; }
       }
 
       h1 {
         text-align: center;
         margin-top: 2em;
       }
-
       img {
         display: block;
         max-width: 100%;
         height: auto;
         margin: 2em auto;
       }
-
       footer {
         background-color: #333;
         color: white;
         text-align: center;
         padding: 1em 0;
         margin-top: auto;
+        /* extend full width like nav */
+        margin-left: calc(-1 * var(--page-pad));
+        margin-right: calc(-1 * var(--page-pad));
       }
 
       @keyframes cool-text-effect {
-        0% { color: black; }
-        50% { color: red; }
-        100% { color: black; }
+        0% { color: black; } 50% { color: red; } 100% { color: black; }
       }
-
-      .cool-text {
-        animation: cool-text-effect 3s infinite alternate;
-      }
+      .cool-text { animation: cool-text-effect 3s infinite alternate; }
     </style>
   </head>
   <body>
     <nav>
-      <!-- Hamburger button -->
-      <div class="menu-toggle" id="menu-toggle">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
+      <!-- Accessible hamburger -->
+      <button class="menu-toggle" id="menuToggle"
+              aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
 
-      <ul id="nav-links">
+      <ul id="navLinks">
         <li><a href="#">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="news.html">Bingo News</a></li>
@@ -182,13 +190,24 @@
     </footer>
 
     <script>
-      const menuToggle = document.getElementById("menu-toggle");
-      const navLinks = document.getElementById("nav-links");
+      const btn = document.getElementById('menuToggle');
+      const list = document.getElementById('navLinks');
 
-      menuToggle.addEventListener("click", () => {
-        menuToggle.classList.toggle("open");
-        navLinks.classList.toggle("show");
+      btn.addEventListener('click', () => {
+        const open = btn.classList.toggle('open');
+        list.classList.toggle('show', open);
+        btn.setAttribute('aria-expanded', String(open));
+      });
+
+      // Close menu when clicking a link (mobile quality-of-life)
+      list.addEventListener('click', e => {
+        if (e.target.tagName === 'A' && btn.classList.contains('open')) {
+          btn.classList.remove('open');
+          list.classList.remove('show');
+          btn.setAttribute('aria-expanded', 'false');
+        }
       });
     </script>
   </body>
 </html>
+
