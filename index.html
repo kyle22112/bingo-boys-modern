@@ -30,8 +30,12 @@
 
       nav {
         background-color: #333;
-        padding: 1em;
+        padding: 0 1em;
         position: relative;
+        display: flex;
+        align-items: center;   /* vertically center content */
+        justify-content: center; /* center links on desktop */
+        min-height: 60px;      /* ensures enough height for hamburger */
       }
 
       nav ul {
@@ -64,21 +68,37 @@
         cursor: pointer;
         position: absolute;
         right: 1em;
-        top: 1.2em;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1001;
       }
 
       .menu-toggle div {
         width: 25px;
         height: 3px;
         background: white;
-        margin: 4px 0;
+        margin: 5px 0;
         transition: 0.4s;
+      }
+
+      /* Animate hamburger to X */
+      .menu-toggle.open div:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+      .menu-toggle.open div:nth-child(2) {
+        opacity: 0;
+      }
+      .menu-toggle.open div:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
       }
 
       /* Mobile styles */
       @media (max-width: 768px) {
+        nav {
+          justify-content: flex-start;
+        }
+
         nav ul {
-          display: none;
           flex-direction: column;
           background: #333;
           position: absolute;
@@ -87,10 +107,15 @@
           width: 200px;
           text-align: right;
           padding: 1em;
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.4s ease, opacity 0.4s ease;
+          opacity: 0;
         }
 
         nav ul.show {
-          display: flex;
+          max-height: 500px; /* enough for all links */
+          opacity: 1;
         }
 
         .menu-toggle {
@@ -161,6 +186,7 @@
       const navLinks = document.getElementById("nav-links");
 
       menuToggle.addEventListener("click", () => {
+        menuToggle.classList.toggle("open");
         navLinks.classList.toggle("show");
       });
     </script>
