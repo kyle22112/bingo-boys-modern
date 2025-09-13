@@ -31,6 +31,7 @@
       padding: 1em;
       box-sizing: border-box;
       background-color: #f9f9f9;
+      overflow-x: hidden; /* 🔑 prevents sideways scroll */
     }
 
     nav {
@@ -63,19 +64,21 @@
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* was 160px */
       gap: 12px;
-      padding: 20px;
-      max-width: 1200px;
+      padding: 10px;
+      max-width: 100%; /* was 1200px */
       margin: auto;
+      box-sizing: border-box; /* make padding not cause overflow */
     }
-
+    
     .gallery img {
       width: 100%;
       height: auto;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       transition: transform 0.3s ease;
+      display: block; /* prevents inline spacing issues */
     }
 
     .gallery a:hover img {
@@ -188,6 +191,12 @@
       text-align: center;
       padding: 1em 0;
       margin-top: auto;
+    }
+
+    @media (max-width: 400px) {
+      .gallery {
+      grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
