@@ -1,106 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta property="og:title" content="Bingo Boys">
-    <meta property="og:description" content="Welcome to the Bingo Boys official site. Explore our music, news, gallery, members, and more.">
-    <meta property="og:image" content="https://bingo-boys.org/logocover.png">
-    <meta property="og:url" content="https://bingo-boys.org/index.html">
-    <meta property="og:type" content="website">
-
-    <meta name="description" content="Welcome to the official site of the Bingo Boys. Explore our music, news, gallery, members, and more.">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8994374215719373" crossorigin="anonymous"></script>
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
+    <meta property="og:title" content="Bingo Boys" />
+    <meta property="og:description" content="Welcome to the Bingo Boys official site. Explore our music, news, gallery, members, and more." />
+    <meta property="og:image" content="https://bingo-boys.org/logocover.png" />
+    <meta property="og:url" content="https://bingo-boys.org/index.html" />
+    <meta property="og:type" content="website" />
+
+    <meta name="description" content="Welcome to the official site of the Bingo Boys. Explore our music, news, gallery, members, and more." />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8994374215719373" crossorigin="anonymous"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
 
     <title>Bingo Boys</title>
 
     <style>
-      body {
-        margin: 0;
-        font-family: "Bubblegum Sans", sans-serif;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-        padding: 1em;
+      :root {
+        --bg: #0e0e10;
+        --card: #1a1a1d;
+        --accent: #7f5af0;
+        --accent-soft: #a58aff;
+        --text: #e4e4e6;
+        --text-dim: #a1a1a7;
+      }
+
+      * {
         box-sizing: border-box;
       }
 
+      body {
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
       nav {
-        background-color: #333;
-        padding: 1em;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: rgba(14,14,16,0.75);
+        backdrop-filter: blur(12px);
+        padding: 1rem 0;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
       }
 
       nav ul {
-        list-style: none;
         margin: 0;
         padding: 0;
+        list-style: none;
         display: flex;
-        flex-wrap: wrap;
         justify-content: center;
-      }
-
-      nav ul li {
-        margin: 0.5em 1em;
+        gap: 1.8rem;
+        flex-wrap: wrap;
       }
 
       nav ul li a {
-        color: white;
         text-decoration: none;
-        font-size: 1.2em;
+        color: var(--text);
+        font-weight: 500;
+        font-size: 1.1rem;
+        transition: 0.25s ease;
+        padding-bottom: 4px;
+        border-bottom: 2px solid transparent;
       }
 
       nav ul li a:hover {
-        text-decoration: underline;
+        color: var(--accent);
+        border-bottom-color: var(--accent);
+      }
+
+      header {
+        text-align: center;
+        padding: 5rem 1rem 2rem;
+        animation: fadeIn 1.2s ease-out;
       }
 
       h1 {
-        text-align: center;
-        margin-top: 2em;
+        font-size: clamp(2.8rem, 6vw, 5rem);
+        margin: 0;
+        background: linear-gradient(90deg, var(--accent), var(--accent-soft));
+        -webkit-background-clip: text;
+        color: transparent;
       }
 
-      img {
+      .hero-img {
         display: block;
-        max-width: 100%;
-        height: auto;
-        margin: 2em auto;
+        width: min(700px, 90%);
+        margin: 2rem auto;
+        border-radius: 24px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+        animation: popIn 0.9s ease-out;
       }
 
       footer {
-        background-color: #333;
-        color: white;
-        text-align: center;
-        padding: 1em 0;
         margin-top: auto;
-      }
-
-      @keyframes cool-text-effect {
-        0% {
-          color: black;
-        }
-        50% {
-          color: red;
-        }
-        100% {
-          color: black;
-        }
+        text-align: center;
+        padding: 2rem 0;
+        background: rgba(26,26,29,0.85);
+        backdrop-filter: blur(10px);
+        color: var(--text-dim);
+        border-top: 1px solid rgba(255,255,255,0.05);
       }
 
       .cool-text {
-        animation: cool-text-effect 3s infinite alternate;
+        font-size: 1.2rem;
+        animation: glow 3s infinite ease-in-out alternate;
       }
+
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      @keyframes popIn {
+        from { opacity: 0; transform: scale(0.9); }
+        to { opacity: 1; transform: scale(1); }
+      }
+
+      @keyframes glow {
+        0% { color: var(--text-dim); }
+        50% { color: var(--accent-soft); }
+        100% { color: var(--accent); }
+      }
+
       .link {
-        color: inherit; /* follows the animation color */
-        text-decoration: underline; /* still looks like a link */
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .link:hover {
+        text-decoration: underline;
       }
     </style>
   </head>
+
   <body>
     <nav>
       <ul>
@@ -114,8 +159,11 @@
       </ul>
     </nav>
 
-    <h1>Bingo Boys</h1>
-    <img src="bingo.PNG" alt="logo" />
+    <header>
+      <h1>Bingo Boys</h1>
+    </header>
+
+    <img src="bingo.PNG" alt="logo" class="hero-img" />
 
     <footer>
       <h3 class="cool-text">Website by <a class="link" href="https://discord.com/users/845530409429368833">Ferret Man</a></h3>
