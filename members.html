@@ -1,88 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta property="og:title" content="Bingo Boys Members">
-    <meta property="og:description" content="Meet the members of the Bingo Boys and learn more about the group.">
-    <meta property="og:image" content="https://bingo-boys.org/logocover.png">
-    <meta property="og:url" content="https://bingo-boys.org/members.html">
-    <meta property="og:type" content="website">
-    <meta name="description" content="Meet the members of the Bingo Boys and learn more about the group.">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8994374215719373"
-     crossorigin="anonymous"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <meta property="og:title" content="Bingo Boys Members" />
+    <meta property="og:description" content="Meet the members of the Bingo Boys and learn more about the group." />
+    <meta property="og:image" content="https://bingo-boys.org/logocover.png" />
+    <meta property="og:url" content="https://bingo-boys.org/members.html" />
+    <meta property="og:type" content="website" />
+
+    <meta name="description" content="Meet the members of the Bingo Boys and learn more about the group." />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8994374215719373" crossorigin="anonymous"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+
     <title>Members - Bingo Boys</title>
+
     <style>
+      :root {
+        --bg: #0e0e10;
+        --card: #1a1a1d;
+        --accent: #7f5af0;
+        --accent-soft: #a58aff;
+        --text: #e4e4e6;
+        --text-dim: #a1a1a7;
+      }
+
+      * { box-sizing: border-box; }
+
       body {
         margin: 0;
-        font-family: "Bubblegum Sans", sans-serif;
+        font-family: "Poppins", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
-        min-height: 100vh;
-        padding: 1em;
-        box-sizing: border-box;
       }
 
       nav {
-        background-color: #333;
-        padding: 1em;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: rgba(14,14,16,0.75);
+        backdrop-filter: blur(12px);
+        padding: 1rem 0;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
       }
 
       nav ul {
-        list-style: none;
         margin: 0;
         padding: 0;
+        list-style: none;
         display: flex;
-        flex-wrap: wrap;
         justify-content: center;
-      }
-
-      nav ul li {
-        margin: 0.5em 1em;
+        gap: 1.8rem;
+        flex-wrap: wrap;
       }
 
       nav ul li a {
-        color: white;
         text-decoration: none;
-        font-size: 1.2em;
+        color: var(--text);
+        font-weight: 500;
+        font-size: 1.1rem;
+        transition: 0.25s ease;
+        padding-bottom: 4px;
+        border-bottom: 2px solid transparent;
       }
 
       nav ul li a:hover {
-        text-decoration: underline;
+        color: var(--accent);
+        border-bottom-color: var(--accent);
+      }
+
+      header {
+        text-align: center;
+        padding: 5rem 1rem 2rem;
+        animation: fadeIn 1.2s ease-out;
       }
 
       h1 {
-        text-align: center;
-        margin: 1em 0 0.5em;
+        font-size: clamp(2.8rem, 6vw, 5rem);
+        margin: 0;
+        background: linear-gradient(90deg, var(--accent), var(--accent-soft));
+        -webkit-background-clip: text;
+        color: transparent;
       }
 
-      .member-list {
+      main {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem 1rem 4rem;
         text-align: center;
-        margin-top: 1em;
       }
 
-      .member-list h3 {
-        margin: 0.3em 0;
-        font-size: 1.4em;
+      .notice {
+        margin-top: 1.5rem;
+        padding: 2rem;
+        background: var(--card);
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        animation: popIn 0.9s ease-out;
+      }
+
+      .notice h2 {
+        margin-top: 0;
+        font-size: 1.5rem;
+        color: var(--accent-soft);
+      }
+
+      .notice p {
+        margin: 0.5rem 0 0;
+        font-size: 1.1rem;
+        color: var(--text-dim);
+        line-height: 1.6;
       }
 
       footer {
-        background-color: #333;
-        color: white;
-        text-align: center;
-        padding: 1em 0;
         margin-top: auto;
+        text-align: center;
+        padding: 2rem 0;
+        background: rgba(26,26,29,0.85);
+        backdrop-filter: blur(10px);
+        color: var(--text-dim);
+        border-top: 1px solid rgba(255,255,255,0.05);
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      @keyframes popIn {
+        from { opacity: 0; transform: scale(0.95); }
+        to { opacity: 1; transform: scale(1); }
       }
     </style>
   </head>
+
   <body>
     <nav>
       <ul>
@@ -96,22 +156,20 @@
       </ul>
     </nav>
 
-    <h1>Members</h1>
-    <h1>(Outdated, fix coming soon)</h1>
-    <div class="member-list">
-      <h3>Johnathan / Ferret Man / Lit Skittle</h3>
-      <h3>Owen / 1984 Pepsi Can</h3>
-      <h3>Evan / Cupcake Man</h3>
-      <h3>Skyler</h3>
-      <h3>Ava / The Booty Slayer</h3>
-      <h3>River</h3>
-      <h3>Aiden</h3>
-      <h3>Ryder</h3>
-      <h3>Rangsey</h3>
-      <h3>Daymond</h3>
-      <h3>Curtis</h3>
-      <h3>Chase</h3>
-    </div>
+    <header>
+      <h1>Members</h1>
+    </header>
+
+    <main>
+      <div class="notice">
+        <h2>(Outdated, fix coming soon)</h2>
+        <p>
+          This page will soon be replaced with an automated system that pulls the
+          current member list directly from our Discord server. Once completed,
+          it will always stay up to date without manual edits.
+        </p>
+      </div>
+    </main>
 
     <footer>
       <p>&copy; 2025 Bingo Boys</p>
