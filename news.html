@@ -1,112 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta property="og:title" content="Bingo Boys News">
-    <meta property="og:description" content="Stay updated with the latest news and announcements from the Bingo Boys.">
-    <meta property="og:image" content="https://bingo-boys.org/logocover.png">
-    <meta property="og:url" content="https://bingo-boys.org/news.html">
-    <meta property="og:type" content="website">
-    <meta name="description" content="Stay updated with the latest news and announcements from the Bingo Boys.">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8994374215719373"
-     crossorigin="anonymous"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <meta property="og:title" content="Bingo Boys News" />
+    <meta property="og:description" content="Stay updated with the latest news and announcements from the Bingo Boys." />
+    <meta property="og:image" content="https://bingo-boys.org/logocover.png" />
+    <meta property="og:url" content="https://bingo-boys.org/news.html" />
+    <meta property="og:type" content="website" />
+
+    <meta name="description" content="Stay updated with the latest news and announcements from the Bingo Boys." />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8994374215719373" crossorigin="anonymous"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+
     <title>News - Bingo Boys</title>
+
     <style>
-      body {
-        margin: 0;
-        font-family: "Bubblegum Sans", sans-serif;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-        padding: 1em;
-        box-sizing: border-box;
+      :root {
+        --bg: #0e0e10;
+        --card: #1a1a1d;
+        --accent: #7f5af0;
+        --accent-soft: #a58aff;
+        --text: #e4e4e6;
+        --text-dim: #a1a1a7;
       }
 
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
 
       nav {
-        background-color: #333;
-        padding: 1em;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: rgba(14,14,16,0.75);
+        backdrop-filter: blur(12px);
+        padding: 1rem 0;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
       }
 
       nav ul {
-        list-style-type: none;
         margin: 0;
         padding: 0;
+        list-style: none;
         display: flex;
-        flex-wrap: wrap;
         justify-content: center;
-      }
-
-      nav ul li {
-        margin: 0.5em 1em;
+        gap: 1.8rem;
+        flex-wrap: wrap;
       }
 
       nav ul li a {
-        color: white;
         text-decoration: none;
-        font-size: 1.2em;
+        color: var(--text);
+        font-weight: 500;
+        font-size: 1.1rem;
+        transition: 0.25s ease;
+        padding-bottom: 4px;
+        border-bottom: 2px solid transparent;
       }
 
       nav ul li a:hover {
-        text-decoration: underline;
+        color: var(--accent);
+        border-bottom-color: var(--accent);
+      }
+
+      header {
+        text-align: center;
+        padding: 5rem 1rem 2rem;
+        animation: fadeIn 1.2s ease-out;
+      }
+
+      h1 {
+        font-size: clamp(2.8rem, 6vw, 5rem);
+        margin: 0;
+        background: linear-gradient(90deg, var(--accent), var(--accent-soft));
+        -webkit-background-clip: text;
+        color: transparent;
       }
 
       main {
-        padding: 1em;
-        max-width: 800px;
-        margin: auto;
+        max-width: 900px;
+        margin: 0 auto 4rem;
+        padding: 0 1rem;
+        width: 100%;
       }
 
       .news-entry {
-        margin-bottom: 2em;
-        text-align: center;
+        background: var(--card);
+        border-radius: 20px;
+        padding: 2rem 2rem 1.8rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+        animation: popIn 0.8s ease-out;
       }
 
       .news-entry h2 {
-        margin-bottom: 0.3em;
-        font-size: 1.4em;
+        margin: 0;
+        font-size: 0.95rem;
+        color: var(--text-dim);
+        font-weight: 400;
       }
 
-      .news-entry h1 {
-        margin: 0.3em 0;
-        font-size: 1.8em;
+      .news-entry h3 {
+        margin: 0.4rem 0 0.8rem;
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: var(--text);
       }
 
       .news-entry p {
-        margin: 0.5em 0;
-        font-size: 1.1em;
+        margin: 0.6rem 0 0;
+        font-size: 1.05rem;
+        line-height: 1.6;
+        color: var(--text-dim);
       }
 
       .news-entry a {
-        color: #007bff;
+        color: var(--accent);
         text-decoration: none;
+        font-weight: 500;
       }
 
-      .news-entry a:hover {
-        text-decoration: underline;
-      }
-
-      hr {
-        margin: 2em 0;
-        border: none;
-        border-top: 1px solid #ccc;
-      }
+      .news-entry a:hover { text-decoration: underline; }
 
       footer {
-        background-color: #333;
-        color: white;
-        text-align: center;
-        padding: 1em 0;
         margin-top: auto;
+        text-align: center;
+        padding: 1.8rem 0;
+        background: rgba(26,26,29,0.85);
+        backdrop-filter: blur(10px);
+        color: var(--text-dim);
+        border-top: 1px solid rgba(255,255,255,0.05);
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      @keyframes popIn {
+        from { opacity: 0; transform: scale(0.96); }
+        to { opacity: 1; transform: scale(1); }
       }
     </style>
   </head>
+
   <body>
     <nav>
       <ul>
@@ -120,128 +172,28 @@
       </ul>
     </nav>
 
-    <main>
-      <div class="news-entry">
-        <h2>September 18, 2025</h2>
-        <h1>New Partnership</h1>
-        <p>A partnership with a new server owned by one of our members Chase called "The Outback Boys" has been established.</p>
-        <hr />
-      </div>
-      
-      <div class="news-entry">
-        <h2>September 12, 2025</h2>
-        <h1>Gallery Update</h1>
-        <p>The <a href="gallery.html">Gallery</a> has been broken since the last update, but fortunately a fix has been applied. This fix will solve the images not fitting on the screen, the selection of images, and the long loading times for each image.</p>
-        <hr />
-      </div>
-      
-      <div class="news-entry">
-        <h2>September 7, 2025</h2>
-        <h1>Return of The Bingo Ball</h1>
-        <p>The Bingo Ball went missing long ago, but soon an heir will arrive. More information coming soon.</p>
-        <hr />
-      </div>
-      
-      <div class="news-entry">
-        <h2>August 17, 2025</h2>
-        <h1>New Domain</h1>
-        <p>The Bingo Boys website has a new domain. From now on, you can use <a href='https://bingo-boys.org'>bingo-boys.org</a> to access the website!</p>
-        <hr />
-      </div>
-      
-      <div class="news-entry">
-        <h2>May 22, 2025</h2>
-        <h1>Website Redesign</h1>
-        <p>The website is now more mobile friendly, and a new page for Bingo Boys lore has been added.</p>
-        <hr />
-      </div>
-      
-      <div class="news-entry">
-        <h2>May 21, 2025</h2>
-        <h1>New Bingo Boys Server</h1>
-        <p>A new Discord server has been created for bot experiments.</p>
-        <p><a href="https://discord.gg/fSaSMWcFyP">BB's Bot Experiment Discord Server</a></p>
-        <hr />
-      </div>
-      
-      <div class="news-entry">
-        <h2>May 21, 2025</h2>
-        <h1>Gallery Section Finished</h1>
-        <p>The gallery section is complete! You can now access it by clicking "Gallery" at the top of the page.</p>
-        <hr />
-      </div>
-      
-      <div class="news-entry">
-        <h2>March 5, 2025</h2>
-        <h1>Gallery Section Being Added</h1>
-        <p>We’re adding a new photo gallery to the site soon to showcase Bingo Boys highlights.</p>
-        <hr />
-      </div>
-      
-      <div class="news-entry">
-        <h2>February 27, 2025</h2>
-        <h1>First Single Releasing Soon</h1>
-        <p>The first single from our debut album is coming soon! Stay tuned for the exact date.</p>
-        <hr />
-      </div>
-      
-      <div class="news-entry">
-        <h2>January 22, 2025</h2>
-        <h1>The Bingo Boys Show Announced</h1>
-        <p>We’re working on a new project: an animated show based on the Bingo Boys.</p>
-        <p><a href="https://discord.gg/CzyMYDYxZp">The Bingo Boys Show Discord</a></p>
-        <hr />
-      </div>
-      
-      <div class="news-entry">
-        <h2>December 26, 2024</h2>
-        <h1>New Song Cancelled</h1>
-        <p>The song mentioned earlier will now be released at a later date.</p>
-        <hr />
-      </div>
-      
-      <div class="news-entry">
-        <h2>December 18, 2024</h2>
-        <h1>New Music</h1>
-        <p>We’re working on a new song set to release December 24–25!</p>
-        <hr />
-      </div>
-      
-      <div class="news-entry">
-        <h2>December 17, 2024</h2>
-        <h1>Major Website Update #2</h1>
-        <p>The site has finally been updated after a long break. We’re working on an introduction video and hope to release it soon. The album is still far from finished.</p>
-        <hr />
-      </div>
-      
-      <div class="news-entry">
-        <h2>October 1, 2024</h2>
-        <h1>Bingo's Got Talent Cancelled</h1>
-        <p>We have decided to cancel the event after not enough people showed up. We’ll hold it again once the Bingo Boys has more members.</p>
-        <hr />
-      </div>
-      
-      <div class="news-entry">
-        <h2>September 30, 2024</h2>
-        <h1>Bingo's Got Talent</h1>
-        <p>The very first Bingo's Got Talent is taking place tomorrow at 7 PM PDT! Judges receive a $5 Amazon gift card while the winner gets a $10 gift card! The results will be on here soon!</p>
-        <hr />
-      </div>
-      
-      <div class="news-entry">
-        <h2>September 24, 2024</h2>
-        <h1>Server Deleted</h1>
-        <p>The leader and owner of the Bingo Boys has deleted the server. This is a big problem, and we have discussed it. From now on, I (Ferret Man) will lead the Bingo Boys.</p>
-        <hr />
-      </div>
-      
-      <div class="news-entry">
-        <h2>September 21, 2024</h2>
-        <h1>Website Update!</h1>
-        <p>The site has been left unfinished for a while now, but it has finally been updated!</p>
-        <hr />
-      </div>
+    <header>
+      <h1>Bingo News</h1>
+    </header>
 
+    <main>
+      <div class="news-entry"><h2>September 18, 2025</h2><h3>New Partnership</h3><p>A partnership with a new server owned by one of our members Chase called "The Outback Boys" has been established.</p></div>
+      <div class="news-entry"><h2>September 12, 2025</h2><h3>Gallery Update</h3><p>The <a href="gallery.html">Gallery</a> has been fixed, solving image sizing, selection issues, and long loading times.</p></div>
+      <div class="news-entry"><h2>September 7, 2025</h2><h3>Return of The Bingo Ball</h3><p>The Bingo Ball went missing long ago, but soon an heir will arrive. More information coming soon.</p></div>
+      <div class="news-entry"><h2>August 17, 2025</h2><h3>New Domain</h3><p>You can now access the site using <a href="https://bingo-boys.org">bingo-boys.org</a>.</p></div>
+      <div class="news-entry"><h2>May 22, 2025</h2><h3>Website Redesign</h3><p>The website is now more mobile friendly, and a new lore page has been added.</p></div>
+      <div class="news-entry"><h2>May 21, 2025</h2><h3>New Bingo Boys Server</h3><p>A new Discord server has been created for bot experiments.</p><p><a href="https://discord.gg/fSaSMWcFyP">BB's Bot Experiment Discord Server</a></p></div>
+      <div class="news-entry"><h2>May 21, 2025</h2><h3>Gallery Section Finished</h3><p>The gallery section is now complete and accessible from the navigation bar.</p></div>
+      <div class="news-entry"><h2>March 5, 2025</h2><h3>Gallery Section Being Added</h3><p>A new photo gallery is being added to showcase Bingo Boys highlights.</p></div>
+      <div class="news-entry"><h2>February 27, 2025</h2><h3>First Single Releasing Soon</h3><p>The first single from our debut album is coming soon.</p></div>
+      <div class="news-entry"><h2>January 22, 2025</h2><h3>The Bingo Boys Show Announced</h3><p>An animated show based on the Bingo Boys is in development.</p><p><a href="https://discord.gg/CzyMYDYxZp">The Bingo Boys Show Discord</a></p></div>
+      <div class="news-entry"><h2>December 26, 2024</h2><h3>New Song Cancelled</h3><p>The song mentioned earlier will now be released at a later date.</p></div>
+      <div class="news-entry"><h2>December 18, 2024</h2><h3>New Music</h3><p>We’re working on a new song set to release December 24–25.</p></div>
+      <div class="news-entry"><h2>December 17, 2024</h2><h3>Major Website Update #2</h3><p>The site has been updated after a long break. An introduction video is coming soon.</p></div>
+      <div class="news-entry"><h2>October 1, 2024</h2><h3>Bingo's Got Talent Cancelled</h3><p>The event was cancelled due to low attendance.</p></div>
+      <div class="news-entry"><h2>September 30, 2024</h2><h3>Bingo's Got Talent</h3><p>The first Bingo's Got Talent took place with prizes for judges and winners.</p></div>
+      <div class="news-entry"><h2>September 24, 2024</h2><h3>Server Deleted</h3><p>The original server was deleted. Ferret Man is now leading the Bingo Boys.</p></div>
+      <div class="news-entry"><h2>September 21, 2024</h2><h3>Website Update</h3><p>The site was finalized after being unfinished for some time.</p></div>
     </main>
 
     <footer>
