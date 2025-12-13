@@ -1,184 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta property="og:title" content="Bingo Boys Lore">
-    <meta property="og:description" content="Dive into the Bingo Boys lore, inside jokes, and the story behind the group.">
-    <meta property="og:image" content="https://bingo-boys.org/logocover.png">
-    <meta property="og:url" content="https://bingo-boys.org/lore.html">
-    <meta property="og:type" content="website">
-    <meta name="description" content="Dive into the Bingo Boys lore, inside jokes, and the story behind the group.">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8994374215719373"
-     crossorigin="anonymous"></script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet" />
-    <title>Lore - Bingo Boys</title>
-    <style>
-      body {
-        margin: 0;
-        font-family: "Bubblegum Sans", sans-serif;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-        padding: 1em;
-        box-sizing: border-box;
-      }
-      .center {
-        text-align: center;
-      }
-      nav {
-        background-color: #333;
-        padding: 1em;
-      }
-      nav ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      nav ul li {
-        margin: 0.5em 1em;
-      }
-      nav ul li a {
-        color: white;
-        text-decoration: none;
-        font-size: 1.2em;
-      }
-      nav ul li a:hover {
-        text-decoration: underline;
-      }
-      h1 {
-        text-align: center;
-        margin-top: 2em;
-      }
-      img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin: 2em auto;
-      }
-      img.large {
-        width: 600px;
-      }
-      img.medium {
-        width: 350px;
-      }
-      img.small {
-        width: 200px;
-      }
-      hr {
-        margin: 2em 0;
-        border: none;
-        border-top: 1px solid #ccc;
-      }
-      footer {
-        background-color: #333;
-        color: white;
-        text-align: center;
-        padding: 1em 0;
-        margin-top: auto;
-      }
-    </style>
-  </head>
-  <body>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="news.html">Bingo News</a></li>
-        <li><a href="music.html">Music</a></li>
-        <li><a href="members.html">Members</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="lore.html">Lore</a></li>
-      </ul>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <h1 class="center">Lore</h1>
+  <meta property="og:title" content="Bingo Boys Lore" />
+  <meta property="og:description" content="Dive into the Bingo Boys lore, inside jokes, and the story behind the group." />
+  <meta property="og:image" content="https://bingo-boys.org/logocover.png" />
+  <meta property="og:url" content="https://bingo-boys.org/lore.html" />
+  <meta property="og:type" content="website" />
 
-    <div>
-      <h1 class="center">The Bingo Ball</h1>
-      <p class="center">
-        The Bingo Ball is a small foam basketball found at a lake, worshipped as a god, with a ceremony dedicated to it held in a gazebo. Its current location is unknown.
-      </p>
-      <hr />
-    </div>
+  <meta name="description" content="Dive into the Bingo Boys lore, inside jokes, and the story behind the group." />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8994374215719373" crossorigin="anonymous"></script>
 
-    <div>
-      <h1 class="center">Suckit</h1>
-      <p class="center">Emoji character created by Owen, head is always 🤑 emoji.</p>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <title>Lore - Bingo Boys</title>
+
+  <style>
+    :root {
+      --bg: #0e0e10;
+      --card: #1a1a1d;
+      --accent: #7f5af0;
+      --accent-soft: #a58aff;
+      --text: #e4e4e6;
+      --text-dim: #a1a1a7;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(14,14,16,0.75);
+      backdrop-filter: blur(12px);
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 1.8rem;
+      flex-wrap: wrap;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+      font-size: 1.1rem;
+      transition: 0.25s ease;
+      padding-bottom: 4px;
+      border-bottom: 2px solid transparent;
+    }
+
+    nav ul li a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    header {
+      text-align: center;
+      padding: 4.5rem 1rem 3rem;
+      animation: fadeIn 1.2s ease-out;
+    }
+
+    header h1 {
+      font-size: clamp(2.6rem, 6vw, 4.5rem);
+      margin: 0;
+      background: linear-gradient(90deg, var(--accent), var(--accent-soft));
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .lore-container {
+      max-width: 900px;
+      margin: 0 auto 3rem;
+      padding: 0 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    .lore-card {
+      background: var(--card);
+      border-radius: 22px;
+      padding: 2rem 2rem 2.5rem;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.55);
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    .lore-card h2 {
+      margin: 0 0 0.75rem;
+      font-size: 1.9rem;
+      color: var(--accent-soft);
+      text-align: center;
+    }
+
+    .lore-card p {
+      margin: 0 auto 1.5rem;
+      text-align: center;
+      color: var(--text-dim);
+      line-height: 1.7;
+      max-width: 720px;
+    }
+
+    .lore-card img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+    }
+
+    .small { max-width: 200px; }
+    .medium { max-width: 350px; }
+    .large { max-width: 600px; }
+
+    footer {
+      margin-top: auto;
+      text-align: center;
+      padding: 2rem 0;
+      background: rgba(26,26,29,0.85);
+      backdrop-filter: blur(10px);
+      color: var(--text-dim);
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="news.html">Bingo News</a></li>
+      <li><a href="music.html">Music</a></li>
+      <li><a href="members.html">Members</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="lore.html">Lore</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Lore</h1>
+  </header>
+
+  <main class="lore-container">
+    <section class="lore-card">
+      <h2>The Bingo Ball</h2>
+      <p>The Bingo Ball is a small foam basketball found at a lake, worshipped as a god, with a ceremony held in a gazebo. Its current location is unknown.</p>
+    </section>
+
+    <section class="lore-card">
+      <h2>Suckit</h2>
+      <p>Emoji character created by Owen. Head is always the 🤑 emoji.</p>
       <img src="suckit.png" class="medium" alt="Suckit" />
-      <hr />
-    </div>
+    </section>
 
-    <div>
-      <h1 class="center">Demos</h1>
-      <p class="center">Originally was a typo by Evan. Demos are demons that torture people.</p>
+    <section class="lore-card">
+      <h2>Demos</h2>
+      <p>Originally a typo by Evan. Demos are demons that torture people.</p>
       <img src="demos.png" class="large" alt="Demos" />
-      <hr />
-    </div>
+    </section>
 
-    <div>
-      <h1 class="center">Egg Man</h1>
-      <p class="center">#1 Enemy of the Bingo Boys.</p>
+    <section class="lore-card">
+      <h2>Egg Man</h2>
+      <p>#1 enemy of the Bingo Boys.</p>
       <img src="eggman.png" class="small" alt="Egg Man" />
-      <hr />
-    </div>
+    </section>
 
-    <div>
-      <h1 class="center">Brian</h1>
-      <p class="center">The dog from the Bingo Boys debut album, Some Sunny Day. Highly praised and worshipped.</p>
+    <section class="lore-card">
+      <h2>Brian</h2>
+      <p>The dog from the Bingo Boys debut album, <em>Some Sunny Day</em>. Highly praised and worshipped.</p>
       <img src="brian.png" class="medium" alt="Brian" />
-      <hr />
-    </div>
+    </section>
 
-    <div>
-      <h1 class="center">Bingo Burrito</h1>
-      <p class="center">Burrito created by Owen, has returned a few times, but not recently.</p>
+    <section class="lore-card">
+      <h2>Bingo Burrito</h2>
+      <p>Burrito created by Owen. Has returned a few times, but not recently.</p>
       <img src="burrito.png" class="medium" alt="Bingo Burrito" />
-      <hr />
-    </div>
+    </section>
 
-    <div>
-      <h1 class="center">Food Lore</h1>
-      <p class="center">
-        Deep lore between living foods that all have bonds and some are enemies. They are created by the chef animals, but the only surviving chef animal is Chef Ferret. Story is currently being developed by Owen, with help from Evan.
-      </p>
+    <section class="lore-card">
+      <h2>Food Lore</h2>
+      <p>Deep lore between living foods created by chef animals. The only surviving chef animal is Chef Ferret. Story is currently being developed by Owen with help from Evan.</p>
       <img src="food.png" class="medium" alt="Food Lore" />
-      <hr />
-    </div>
+    </section>
 
-    <div>
-      <h1 class="center">Lemon</h1>
-      <p class="center">
-        A lemon was hidden in Evan's house around October 2024, and another was added around March. The two lemons still sit there, molding, to this day.
-      </p>
+    <section class="lore-card">
+      <h2>Lemon</h2>
+      <p>A lemon was hidden in Evan's house in October 2024, with another added in March. Both still sit there, molding to this day.</p>
       <img src="lemon.png" class="small" alt="Lemon" />
-      <hr />
-    </div>
+    </section>
 
-    <div>
-      <h1 class="center">Brodie</h1>
-      <p class="center">
-        A child named Eidorb showed his mother a drawing he had created, but she crumpled it up and threw it away. Eidorb grew up to hate all forms of creativity and created an army of what he called the Crodies. The Crodies ruled the world for years, until a Crodie named Grug was born with creativity. Grug grew up and started an army called the Brodies to fight the Crodies and spread creativity. The war still goes on to this very day.
-      </p>
-      <hr />
-    </div>
+    <section class="lore-card">
+      <h2>Brodie</h2>
+      <p>Eidorb showed his mother a drawing she threw away. He grew to hate creativity and created the Crodies. A creative Crodie named Grug formed the Brodies to fight back. The war continues to this day.</p>
+    </section>
 
-    <div>
-      <h1 class="center">Hug Me - Pharrell Williams</h1>
-      <p class="center">The song used in the first Bingo Boys tiktok, from 2022.</p>
+    <section class="lore-card">
+      <h2>Hug Me – Pharrell Williams</h2>
+      <p>The song used in the first Bingo Boys TikTok, from 2022.</p>
       <img src="hugme.png" class="large" alt="Hug Me" />
-      <hr />
-    </div>
+    </section>
+  </main>
 
-    <footer>
-      <p>&copy; 2025 Bingo Boys</p>
-    </footer>
-  </body>
+  <footer>
+    <p>&copy; 2025 Bingo Boys</p>
+  </footer>
+</body>
 </html>
