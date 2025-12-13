@@ -44,6 +44,7 @@
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      overflow-x: hidden;
     }
 
     nav {
@@ -97,11 +98,13 @@
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
       gap: 16px;
-      padding: 1.5rem;
+      padding: 1.25rem;
       max-width: 1300px;
+      width: 100%;
       margin: 0 auto 3rem;
+      overflow-x: hidden;
     }
 
     .gallery a {
