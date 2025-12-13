@@ -1,189 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta property="og:title" content="Bingo Boys Gallery">
-    <meta property="og:description" content="View the Bingo Boys photo gallery with images of the group, friends, and behind-the-scenes moments.">
-    <meta property="og:image" content="https://bingo-boys.org/logocover.png">
-    <meta property="og:url" content="https://bingo-boys.org/gallery.html">
-    <meta property="og:type" content="website">
-  <meta name="description" content="View the Bingo Boys photo gallery with images of the group, friends, and behind-the-scenes moments.">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8994374215719373"
-     crossorigin="anonymous"></script>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <meta property="og:title" content="Bingo Boys Gallery" />
+  <meta property="og:description" content="View the Bingo Boys photo gallery with images of the group, friends, and behind-the-scenes moments." />
+  <meta property="og:image" content="https://bingo-boys.org/logocover.png" />
+  <meta property="og:url" content="https://bingo-boys.org/gallery.html" />
+  <meta property="og:type" content="website" />
+
+  <meta name="description" content="View the Bingo Boys photo gallery with images of the group, friends, and behind-the-scenes moments." />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8994374215719373" crossorigin="anonymous"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+
   <title>Gallery - Bingo Boys</title>
 
-  <!-- Glightbox CSS -->
+  <!-- GLightbox -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 
   <style>
+    :root {
+      --bg: #0e0e10;
+      --card: #1a1a1d;
+      --accent: #7f5af0;
+      --accent-soft: #a58aff;
+      --text: #e4e4e6;
+      --text-dim: #a1a1a7;
+    }
+
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
-      font-family: "Bubblegum Sans", sans-serif;
+      font-family: "Poppins", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
-      min-height: 100vh;
-      padding: 1em;
-      box-sizing: border-box;
-      background-color: #f9f9f9;
-      overflow-x: hidden; /* 🔑 prevents sideways scroll */
     }
 
     nav {
-      background-color: #333;
-      padding: 1em;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(14,14,16,0.75);
+      backdrop-filter: blur(12px);
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
     }
 
     nav ul {
-      list-style: none;
       margin: 0;
       padding: 0;
+      list-style: none;
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-    }
-
-    nav ul li {
-      margin: 0.5em 1em;
+      gap: 1.8rem;
+      flex-wrap: wrap;
     }
 
     nav ul li a {
-      color: white;
       text-decoration: none;
-      font-size: 1.2em;
+      color: var(--text);
+      font-weight: 500;
+      font-size: 1.1rem;
+      transition: 0.25s ease;
+      padding-bottom: 4px;
+      border-bottom: 2px solid transparent;
     }
 
     nav ul li a:hover {
-      text-decoration: underline;
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    header {
+      text-align: center;
+      padding: 4.5rem 1rem 2rem;
+      animation: fadeIn 1.2s ease-out;
+    }
+
+    h1 {
+      font-size: clamp(2.6rem, 6vw, 4.5rem);
+      margin: 0;
+      background: linear-gradient(90deg, var(--accent), var(--accent-soft));
+      -webkit-background-clip: text;
+      color: transparent;
     }
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* was 160px */
-      gap: 12px;
-      padding: 10px;
-      max-width: 100%; /* was 1200px */
-      margin: auto;
-      box-sizing: border-box; /* make padding not cause overflow */
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 16px;
+      padding: 1.5rem;
+      max-width: 1300px;
+      margin: 0 auto 3rem;
     }
-    
+
+    .gallery a {
+      border-radius: 18px;
+      overflow: hidden;
+      background: var(--card);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.45);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery a:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 14px 40px rgba(0,0,0,0.65);
+    }
+
     .gallery img {
       width: 100%;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-      display: block; /* prevents inline spacing issues */
-    }
-
-    .gallery a:hover img {
-      transform: scale(1.05);
-    }
-
-    .download-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 20px 0;
-    }
-
-    .Documents-btn {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      width: fit-content;
-      height: 45px;
-      border: none;
-      padding: 0px 15px;
-      border-radius: 5px;
-      background-color: #333;
-      gap: 10px;
-      cursor: pointer;
-      transition: all 0.3s;
-    }
-
-    .folderContainer {
-      width: 40px;
-      height: fit-content;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-end;
-      position: relative;
-    }
-
-    .fileBack {
-      z-index: 1;
-      width: 80%;
-      height: auto;
-    }
-
-    .filePage {
-      width: 50%;
-      height: auto;
-      position: absolute;
-      z-index: 2;
-      transition: all 0.3s ease-out;
-    }
-
-    .fileFront {
-      width: 85%;
-      height: auto;
-      position: absolute;
-      z-index: 3;
-      opacity: 0.95;
-      transform-origin: bottom;
-      transition: all 0.3s ease-out;
-    }
-
-    .text {
-      color: white;
-      font-size: 14px;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-    }
-
-    .Documents-btn:hover .filePage {
-      transform: translateY(-5px);
-    }
-
-    .Documents-btn:hover {
-      background-color: #444;
-    }
-
-    .Documents-btn:active {
-      transform: scale(0.95);
-    }
-
-    .Documents-btn:hover .fileFront {
-      transform: rotateX(30deg);
-    }
-
-    h1 {
-      text-align: center;
-      margin-top: 1em;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 1em 0;
       margin-top: auto;
+      text-align: center;
+      padding: 2rem 0;
+      background: rgba(26,26,29,0.85);
+      backdrop-filter: blur(10px);
+      color: var(--text-dim);
+      border-top: 1px solid rgba(255,255,255,0.05);
     }
 
-    @media (max-width: 400px) {
-      .gallery {
-      grid-template-columns: 1fr;
-      }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
+
 <body>
   <nav>
     <ul>
@@ -197,38 +154,38 @@
     </ul>
   </nav>
 
-  <h1>Gallery</h1>
-  
-  <div class="gallery">
-    <a href="https://i.ibb.co/p6WcrJD6/1.webp" class="glightbox" data-gallery="bingo" data-title="Owen, one of the original members of the Bingo Boys"><img src="https://i.ibb.co/p6WcrJD6/1.webp" alt="Image 1"></a>
-    <a href="https://i.ibb.co/WWdsBdLB/2.webp" class="glightbox" data-gallery="bingo" data-title="The Bingo Boys logo"><img src="https://i.ibb.co/WWdsBdLB/2.webp" alt="Image 2"></a>
-    <a href="https://i.ibb.co/6Jf74NHV/3.webp" class="glightbox" data-gallery="bingo" data-title="Egg Man, enemy of the Bingo Boys"><img src="https://i.ibb.co/6Jf74NHV/3.webp" alt="Image 3"></a>
-    <a href="https://i.ibb.co/KzGfH7BM/4.webp" class="glightbox" data-gallery="bingo" data-title="Skyler, member of the Bingo Boys"><img src="https://i.ibb.co/KzGfH7BM/4.webp" alt="Image 4"></a>
-    <a href="https://i.ibb.co/zVtZNWB3/5.webp" class="glightbox" data-gallery="bingo" data-title="Evan, Owen, and Johnathan, members of the Bingo Boys"><img src="https://i.ibb.co/zVtZNWB3/5.webp" alt="Image 5"></a>
-    <a href="https://i.ibb.co/PzGcHSW7/6.webp" class="glightbox" data-gallery="bingo" data-title="Ryder, member of the Bingo Boys"><img src="https://i.ibb.co/PzGcHSW7/6.webp" alt="Image 6"></a>
-    <a href="https://i.ibb.co/gMkDYZZN/7.webp" class="glightbox" data-gallery="bingo" data-title="Evan, Owen, Johnathan, and Ryder"><img src="https://i.ibb.co/gMkDYZZN/7.webp" alt="Image 7"></a>
-    <a href="https://i.ibb.co/FqY2pZr0/8.webp" class="glightbox" data-gallery="bingo" data-title="Owen and Sierra, Johnathan's dog"><img src="https://i.ibb.co/FqY2pZr0/8.webp" alt="Image 8"></a>
-    <a href="https://i.ibb.co/CK1v0KZR/19.webp" class="glightbox" data-gallery="bingo" data-title="Chase, member of the Bingo Boys"><img src="https://i.ibb.co/CK1v0KZR/19.webp" alt="Image 9"></a>
-    <a href="https://i.ibb.co/W47d1rzT/10.webp" class="glightbox" data-gallery="bingo" data-title="Bingo Boys cake"><img src="https://i.ibb.co/W47d1rzT/10.webp" alt="Image 10"></a>
-    <a href="https://i.ibb.co/r2bsc3qv/11.webp" class="glightbox" data-gallery="bingo" data-title="River, member of the Bingo Boys"><img src="https://i.ibb.co/r2bsc3qv/11.webp" alt="Image 11"></a>
-    <a href="https://i.ibb.co/rKRQsFbB/12.webp" class="glightbox" data-gallery="bingo" data-title="Evan meltmaxxing"><img src="https://i.ibb.co/rKRQsFbB/12.webp" alt="Image 12"></a>
-    <a href="https://i.ibb.co/XrMkPNxm/13.webp" class="glightbox" data-gallery="bingo" data-title="Evan on Christmas"><img src="https://i.ibb.co/XrMkPNxm/13.webp" alt="Image 13"></a>
-    <a href="https://i.ibb.co/x8PNc2vp/14.webp" class="glightbox" data-gallery="bingo" data-title="The Bingo Boys meet Rhubarb the Reindeer"><img src="https://i.ibb.co/x8PNc2vp/14.webp" alt="Image 14"></a>
-    <a href="https://i.ibb.co/F4d12t3C/15.webp" class="glightbox" data-gallery="bingo" data-title="Hammer Sapsin"><img src="https://i.ibb.co/F4d12t3C/15.webp" alt="Image 15"></a>
-    <a href="https://i.ibb.co/Kp85hxs5/16.webp" class="glightbox" data-gallery="bingo" data-title="Evan and Ryder"><img src="https://i.ibb.co/Kp85hxs5/16.webp" alt="Image 16"></a>
-    <a href="https://i.ibb.co/rfmtBsdX/17.webp" class="glightbox" data-gallery="bingo" data-title="Ryder, Johnathan, and Evan"><img src="https://i.ibb.co/rfmtBsdX/17.webp" alt="Image 17"></a>
-    <a href="https://i.ibb.co/B5WnCdxN/18.webp" class="glightbox" data-gallery="bingo" data-title="Ryder, original member of the Bingo Boys"><img src="https://i.ibb.co/B5WnCdxN/18.webp" alt="Image 18"></a>
-  </div>
+  <header>
+    <h1>Gallery</h1>
+  </header>
 
-  <!-- Glightbox JS -->
+  <section class="gallery">
+    <a href="https://i.ibb.co/p6WcrJD6/1.webp" class="glightbox" data-gallery="bingo" data-title="Owen, one of the original members of the Bingo Boys"><img src="https://i.ibb.co/p6WcrJD6/1.webp" alt="Owen"></a>
+    <a href="https://i.ibb.co/WWdsBdLB/2.webp" class="glightbox" data-gallery="bingo" data-title="The Bingo Boys logo"><img src="https://i.ibb.co/WWdsBdLB/2.webp" alt="Logo"></a>
+    <a href="https://i.ibb.co/6Jf74NHV/3.webp" class="glightbox" data-gallery="bingo" data-title="Egg Man, enemy of the Bingo Boys"><img src="https://i.ibb.co/6Jf74NHV/3.webp" alt="Egg Man"></a>
+    <a href="https://i.ibb.co/KzGfH7BM/4.webp" class="glightbox" data-gallery="bingo" data-title="Skyler, member of the Bingo Boys"><img src="https://i.ibb.co/KzGfH7BM/4.webp" alt="Skyler"></a>
+    <a href="https://i.ibb.co/zVtZNWB3/5.webp" class="glightbox" data-gallery="bingo" data-title="Evan, Owen, and Johnathan"><img src="https://i.ibb.co/zVtZNWB3/5.webp" alt="Group"></a>
+    <a href="https://i.ibb.co/PzGcHSW7/6.webp" class="glightbox" data-gallery="bingo" data-title="Ryder, member of the Bingo Boys"><img src="https://i.ibb.co/PzGcHSW7/6.webp" alt="Ryder"></a>
+    <a href="https://i.ibb.co/gMkDYZZN/7.webp" class="glightbox" data-gallery="bingo" data-title="Evan, Owen, Johnathan, and Ryder"><img src="https://i.ibb.co/gMkDYZZN/7.webp" alt="Group"></a>
+    <a href="https://i.ibb.co/FqY2pZr0/8.webp" class="glightbox" data-gallery="bingo" data-title="Owen and Sierra"><img src="https://i.ibb.co/FqY2pZr0/8.webp" alt="Owen and Sierra"></a>
+    <a href="https://i.ibb.co/CK1v0KZR/19.webp" class="glightbox" data-gallery="bingo" data-title="Chase, member of the Bingo Boys"><img src="https://i.ibb.co/CK1v0KZR/19.webp" alt="Chase"></a>
+    <a href="https://i.ibb.co/W47d1rzT/10.webp" class="glightbox" data-gallery="bingo" data-title="Bingo Boys cake"><img src="https://i.ibb.co/W47d1rzT/10.webp" alt="Cake"></a>
+    <a href="https://i.ibb.co/r2bsc3qv/11.webp" class="glightbox" data-gallery="bingo" data-title="River, member of the Bingo Boys"><img src="https://i.ibb.co/r2bsc3qv/11.webp" alt="River"></a>
+    <a href="https://i.ibb.co/rKRQsFbB/12.webp" class="glightbox" data-gallery="bingo" data-title="Evan meltmaxxing"><img src="https://i.ibb.co/rKRQsFbB/12.webp" alt="Evan"></a>
+    <a href="https://i.ibb.co/XrMkPNxm/13.webp" class="glightbox" data-gallery="bingo" data-title="Evan on Christmas"><img src="https://i.ibb.co/XrMkPNxm/13.webp" alt="Christmas"></a>
+    <a href="https://i.ibb.co/x8PNc2vp/14.webp" class="glightbox" data-gallery="bingo" data-title="The Bingo Boys meet Rhubarb the Reindeer"><img src="https://i.ibb.co/x8PNc2vp/14.webp" alt="Reindeer"></a>
+    <a href="https://i.ibb.co/F4d12t3C/15.webp" class="glightbox" data-gallery="bingo" data-title="Hammer Sapsin"><img src="https://i.ibb.co/F4d12t3C/15.webp" alt="Hammer"></a>
+    <a href="https://i.ibb.co/Kp85hxs5/16.webp" class="glightbox" data-gallery="bingo" data-title="Evan and Ryder"><img src="https://i.ibb.co/Kp85hxs5/16.webp" alt="Evan and Ryder"></a>
+    <a href="https://i.ibb.co/rfmtBsdX/17.webp" class="glightbox" data-gallery="bingo" data-title="Ryder, Johnathan, and Evan"><img src="https://i.ibb.co/rfmtBsdX/17.webp" alt="Group"></a>
+    <a href="https://i.ibb.co/B5WnCdxN/18.webp" class="glightbox" data-gallery="bingo" data-title="Ryder, original member of the Bingo Boys"><img src="https://i.ibb.co/B5WnCdxN/18.webp" alt="Ryder"></a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Bingo Boys</p>
+  </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
   <script>
-    const lightbox = GLightbox({
-      selector: '.glightbox'
-    });
+    GLightbox({ selector: '.glightbox' });
   </script>
 </body>
-<footer>
-  <p>&copy; 2025 Bingo Boys</p>
-</footer>
 </html>
