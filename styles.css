@@ -77,8 +77,8 @@ a {
   color:black;
 }
 :root {
-  --text:;
-  --accent:;
+  --text: #e4e4e6;
+  --accent: #7f5af0;
 }
       nav {
         position: sticky;
