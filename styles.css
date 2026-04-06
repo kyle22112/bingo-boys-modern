@@ -76,6 +76,10 @@ a {
   font-style:normal;
   color:black;
 }
+:root {
+  --text:;
+  --accent:;
+}
       nav {
         position: sticky;
         top: 0;
@@ -109,11 +113,3 @@ a {
       nav ul li a:hover {
         color: var(--accent);
         border-bottom-color: var(--accent);
-/*
-.roboto-slab-<uniquifier> {
-  font-family: "Roboto Slab", serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
-*\
