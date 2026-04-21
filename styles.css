@@ -119,9 +119,3 @@ a {
   right: 0;
   transform: translateX(50%);
 }
-.left {
-  position: fixed;
-  left: 0;
-  transform: translateX(-50%);
-}
-
