@@ -117,5 +117,10 @@ a {
 .right {
   position: fixed;
   right: 0;
-  transform: translateX(50%);
+  transform: translateX(50%); /* Moves 50% of the image width off-screen */
+}
+.left {
+  position: fixed;
+  left: 0;
+  transform: translateX(-50%);
 }
