@@ -114,3 +114,14 @@ a {
       nav ul li a:hover {
         color: var(--accent);
         border-bottom-color: var(--accent);
+.right {
+  position: fixed;
+  right: 0;
+  transform: translateX(50%);
+}
+.left {
+  position: fixed;
+  left: 0;
+  transform: translateX(-50%);
+}
+
