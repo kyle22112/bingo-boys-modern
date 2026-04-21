@@ -1,6 +1,5 @@
 body{
   background-image:linear-gradient(black 60%, maroon);
-  text-align: center;
 }
 .title {
   font-size:50px;
@@ -14,6 +13,7 @@ body{
   display:grid;
   grid-template-columns:10% 80% 10%;
   gap:30px;
+  text-align:center;
 }
 .col2 {
   grid-column:2;
