@@ -72,8 +72,8 @@ body{
 a {
   font-size:20px;
   font-family: "Roboto Slab", serif;
-  font-optical-sizing: auto;
   font-weight:500;
+  font-optical-sizing: auto;
   font-style:normal;
   color:black;
 }
@@ -84,7 +84,7 @@ a {
       nav {
         position: sticky;
         top: 0;
-        z-index: 1000;`
+        z-index: 1000;
         background: rgba(14,14,16,0.75);
         backdrop-filter: blur(12px);
         padding: 1rem 0;
@@ -114,13 +114,14 @@ a {
       nav ul li a:hover {
         color: var(--accent);
         border-bottom-color: var(--accent);
-.right {
+      }
+.rs, .ls {
   position: fixed;
-  right: 0;
-  transform: translateX(50%); /* Moves 50% of the image width off-screen */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 250px; /* adjust as needed */
+  opacity: 0.6;
+  pointer-events: none; /* prevents blocking clicks */
 }
-.left {
-  position: fixed;
-  left: 0;
-  transform: translateX(-50%);
-}
+.rs { right: 0; transform: translate(50%, -50%); }
+.ls { left: 0; transform: translate(-50%, -50%); }
