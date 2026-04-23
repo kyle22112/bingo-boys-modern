@@ -115,13 +115,42 @@ a {
         color: var(--accent);
         border-bottom-color: var(--accent);
       }
-.rs, .ls {
+.rs, .ls, .spinnerr, .spinnerl {
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
   width: 250px; /* adjust as needed */
-  opacity: 0.6;
   pointer-events: none; /* prevents blocking clicks */
 }
 .rs { right: 0; transform: translate(50%, -50%); }
 .ls { left: 0; transform: translate(-50%, -50%); }
+.center { 
+  position:fixed;
+  z-index: -1;
+  bottom:0;
+  left:50%;
+  transform: translate(-50%,10%);
+  width:500px;
+  height:500px;
+}
+.spinnerr {
+  right: 0; transform: translate(50%, -50%) rotate(0deg);
+  animation: spinr 2s linear infinite;
+  z-index: -1;
+  width:300px; height:300px;
+}
+.spinnerl {
+  left: 0; transform: translate(-50%, -50%) rotate(0deg);
+  animation: spinl 2s linear infinite;
+  z-index: -1;
+  width:300px; height:300px;
+}
+
+@keyframes spinr {
+  from { transform: translate(50%, -50%) rotate(0deg); }
+  to   { transform: translate(50%, -50%) rotate(360deg); }
+}
+@keyframes spinl {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
