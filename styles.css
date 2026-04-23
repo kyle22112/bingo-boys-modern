@@ -137,13 +137,13 @@ a {
   right: 0; transform: translate(50%, -50%) rotate(0deg);
   animation: spinr 2s linear infinite;
   z-index: -1;
-  width:300px; height:300px;
+  width:350px; height:350px;
 }
 .spinnerl {
   left: 0; transform: translate(-50%, -50%) rotate(0deg);
   animation: spinl 2s linear infinite;
   z-index: -1;
-  width:300px; height:300px;
+  width:350px; height:350px;
 }
 
 @keyframes spinr {
