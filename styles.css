@@ -1,5 +1,7 @@
 body{
   background-image:linear-gradient(black 60%, maroon);
+  background-attachment: fixed;
+  background-size: cover;
 }
 .title {
   font-size:50px;
