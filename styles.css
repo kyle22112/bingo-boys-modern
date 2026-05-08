@@ -79,6 +79,23 @@ a {
   font-style:normal;
   color:black;
 }
+.clbox {
+  background-color: black;
+  border:2px solid red;
+  margin:100px;
+}
+.clbox h1 {
+  font-size: 30px;
+  color:white;
+  margin: 25px;
+  text-align: center;
+}
+.clbox p {
+  font-size:20px;
+  color:white;
+  margin:20px;
+  text-align: center;
+}
 :root {
   --text: #e4e4e6;
   --accent: #7f5af0;
