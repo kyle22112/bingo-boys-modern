@@ -82,7 +82,9 @@ a {
 .clbox {
   background-color: black;
   border:2px solid red;
-  margin:100px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 30px;
 }
 .clbox h1 {
   font-size: 30px;
@@ -95,6 +97,9 @@ a {
   color:white;
   margin:20px;
   text-align: center;
+}
+.low {
+  margin-top:-70px;
 }
 :root {
   --text: #e4e4e6;
