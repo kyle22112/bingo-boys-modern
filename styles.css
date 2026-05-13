@@ -85,6 +85,7 @@ a {
   border:2px solid red;
   margin-bottom: 30px;
   width: max-content;
+  min-width:550px;
 }
 .clbox h1 {
   font-size: 30px;
